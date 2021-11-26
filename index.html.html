@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Table</title>
+  </head>
+  <body>
+    <table>
+      <tr id="red"></tr>
+      <tr id="green"></tr>
+      <tr id="blue"></tr>
+    </table>
+    <script>
+      let red = document.getElementById("red");
+      let green = document.getElementById("green");
+      let blue = document.getElementById("blue");
+      for (let index = 10; index > 0; index--) {
+        red.innerHTML =
+          "<td style='background-color: rgba(255,0,0," +
+          0.1 * index +
+          "); padding:20px'></td>" +
+          red.innerHTML;
+        green.innerHTML =
+          "<td style='background-color: rgba(0,255,0," +
+          0.1 * index +
+          "); padding:20px'></td>" +
+          green.innerHTML;
+        blue.innerHTML =
+          "<td style='background-color: rgba(0,0,255," +
+          0.1 * index +
+          "); padding:20px'></td>" +
+          blue.innerHTML;
+      }
+    </script>
+  </body>
+</html>
